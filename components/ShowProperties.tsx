@@ -49,7 +49,7 @@ function ShowProperties({ data, isMine }: { data: string; isMine?: boolean }) {
 
     return (
         <>
-            <div className="grid grid-cols-2 gap-5 w-full max-w-[900px] mx-auto my-5">
+            <div className="grid grid-cols-1 gap-5 w-full  mx-auto my-5 p-4 lg:grid-cols-2 lg:max-w-[900px] lg:px-0">
                 {properties.map((item) => (
                     <div
                         key={item._id}

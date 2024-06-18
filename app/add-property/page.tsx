@@ -12,7 +12,7 @@ export default async function Page() {
     return (
         <form
             action={addProperty}
-            className="w-[50%] mx-auto p-5 flex flex-col gap-4"
+            className="w-full mx-auto p-5 flex flex-col gap-4 lg:w-[50%]"
         >
             <input
                 type="text"

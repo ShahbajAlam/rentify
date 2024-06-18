@@ -15,7 +15,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     return (
         <form
             action={updateProperty}
-            className="w-[50%] mx-auto p-5 flex flex-col gap-4"
+            className="w-full mx-auto p-5 flex flex-col gap-4 lg:w-[50%]"
         >
             <input type="text" hidden readOnly name="id" value={property._id} />
 
@@ -25,6 +25,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                     type="text"
                     id="place"
                     name="place"
+                    required
                     defaultValue={property.place}
                     className="input input-bordered input-primary w-full"
                 />
@@ -35,6 +36,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <input
                     type="text"
                     id="area"
+                    required
                     name="area"
                     defaultValue={property.area}
                     className="input input-bordered input-primary w-full"
@@ -48,6 +50,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                     id="rooms"
                     name="rooms"
                     min={0}
+                    required
                     defaultValue={property.rooms}
                     className="input input-bordered input-primary w-full"
                 />
@@ -58,6 +61,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <input
                     type="number"
                     min={0}
+                    required
                     id="bathrooms"
                     name="bathrooms"
                     defaultValue={property.bathrooms}
